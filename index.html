@@ -1,16 +1,115 @@
 <!DOCTYPE html>
-<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJl825c3147959a47938204cdd798ddf96e"/>
-	<title>AR Library</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJl825c3147959a47938204cdd798ddf96e"/>
+    <title>AR Collection | Niyaah</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Theme Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        niyaah: {
+                            green: '#2A5B5B',
+                            cream: '#F7F7F5',
+                            dark: '#1A3B3B'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F7F7F5; /* Niyaah Cream */
+            color: #2A5B5B; /* Niyaah Green */
+        }
+    </style>
 </head>
+<body class="antialiased min-h-screen flex flex-col">
 
-<body>
-	<h1>Welcome to the AR Library</h1>
-	<p>Welcome to the AR Library website.</p>
-	<a href="nasi_lamak.usdz" rel="ar">
-		<img src="assets/nasi_lamak.png" width="200">
-	</a>
-	<a href="panfried_dumplings_8pcs.usdz" rel="ar">
-		<img src="assets/dumpling.png" width="200">
-	</a>
+    <!-- Header -->
+    <header class="w-full py-8 text-center px-4">
+        <h1 class="font-serif text-4xl md:text-5xl font-bold mb-2 tracking-tight">
+            Niyaah AR Collection
+        </h1>
+        <p class="font-sans text-niyaah-green/80 text-lg max-w-xl mx-auto font-light">
+            Intentional experiences. View our curated selection in your space.
+        </p>
+    </header>
 
-</body></html>
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 pb-12">
+        
+        <!-- Grid Layout -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            
+            <!-- Item 1: Nasi Lemak -->
+            <div class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-niyaah-green/10 flex flex-col items-center">
+                <div class="relative w-full aspect-square bg-niyaah-cream rounded-xl mb-4 overflow-hidden flex items-center justify-center group-hover:bg-opacity-70 transition">
+                    <a href="nasi_lamak.usdz" rel="ar" class="block w-full h-full flex flex-col items-center justify-center outline-none">
+                        <img src="assets/nasi_lamak.png" alt="Nasi Lemak" class="w-3/4 h-3/4 object-contain transition-transform duration-500 group-hover:scale-110">
+                        
+                        <!-- AR Badge Overlay -->
+                        <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm p-2 rounded-lg shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-niyaah-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <h2 class="font-serif text-2xl font-semibold mb-1">Nasi Lemak</h2>
+                <a href="nasi_lamak.usdz" rel="ar" class="mt-2 px-6 py-2 bg-niyaah-green text-niyaah-cream font-sans text-sm font-medium rounded-full hover:bg-niyaah-dark transition-colors shadow-sm">
+                    View in AR
+                </a>
+            </div>
+
+            <!-- Item 2: Dumplings -->
+            <div class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-niyaah-green/10 flex flex-col items-center">
+                <div class="relative w-full aspect-square bg-niyaah-cream rounded-xl mb-4 overflow-hidden flex items-center justify-center group-hover:bg-opacity-70 transition">
+                    <a href="panfried_dumplings_8pcs.usdz" rel="ar" class="block w-full h-full flex flex-col items-center justify-center outline-none">
+                        <img src="assets/dumpling.png" alt="Pan-fried Dumplings" class="w-3/4 h-3/4 object-contain transition-transform duration-500 group-hover:scale-110">
+                        
+                         <!-- AR Badge Overlay -->
+                         <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm p-2 rounded-lg shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-niyaah-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <h2 class="font-serif text-2xl font-semibold mb-1">Dumplings</h2>
+                <a href="panfried_dumplings_8pcs.usdz" rel="ar" class="mt-2 px-6 py-2 bg-niyaah-green text-niyaah-cream font-sans text-sm font-medium rounded-full hover:bg-niyaah-dark transition-colors shadow-sm">
+                    View in AR
+                </a>
+            </div>
+
+        </div>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-6 text-center border-t border-niyaah-green/10">
+        <p class="font-sans text-sm text-niyaah-green/60">
+            &copy; 2024 Niyaah. Designed for Focus & Elegance.
+        </p>
+    </footer>
+
+</body>
+</html>
